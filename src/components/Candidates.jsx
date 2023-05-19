@@ -93,6 +93,13 @@ const Candidates = () => {
     },
   ];
 
+  const resetVotes = () => {
+    setRecepVotes(0);
+    setKemalVotes(0);
+    setGecersizVotes(0);
+    setTotalVotes(0);
+  };
+
   return (
     <div className="candidates__container">
       {candidateData.map((candidate, index) => (
@@ -115,7 +122,11 @@ const Candidates = () => {
           <button className="candidates__save" aria-label="Save vote">
             Kayit et
           </button>
-          <button className="candidates__save" aria-label="Reset vote">
+          <button
+            className="candidates__save"
+            onClick={resetVotes}
+            aria-label="Reset vote"
+          >
             Sifirla
           </button>
         </div>
