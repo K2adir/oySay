@@ -31,14 +31,14 @@ const CandidateProfile = ({
   const incrementVote = useDebounce(() => {
     setVoteCount(voteCount + 1);
     setTotalVotes(totalVotes + 1);
-  }, 250);
+  }, 180);
 
   const decrementVote = useDebounce(() => {
     if (voteCount > 0) {
       setVoteCount(voteCount - 1);
       setTotalVotes(totalVotes - 1);
     }
-  }, 250);
+  }, 180);
 
   return (
     <div className="candidates__profile">
