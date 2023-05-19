@@ -5,7 +5,6 @@
   align-items: flex-start;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 1rem;
 
   .candidates__image {
     width: 20vw;
@@ -28,13 +27,15 @@
 
       .candidates__button {
         align-self: center;
-        width: 30vw;
-        height: 10vh;
+        width: 35vw;
+        height: 10.5vh;
       }
     }
 
     .candidates__save {
-      height: 3rem;
+      align-self: center;
+      width: 35vw;
+      height: 10.5vh;
     }
   }
 }

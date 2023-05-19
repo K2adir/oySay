@@ -49,7 +49,7 @@ const CandidateProfile = ({
           onClick={incrementVote}
           aria-label="Increase vote"
         >
-          +
+          Ekle
         </button>
         <h1>{voteCount}</h1>
         <button
@@ -57,7 +57,7 @@ const CandidateProfile = ({
           onClick={decrementVote}
           aria-label="Decrease vote"
         >
-          -
+          Çıkar
         </button>
       </div>
     </div>
@@ -109,7 +109,7 @@ const Candidates = () => {
 
       {/* // void */}
       <div className="candidates__profile">
-        <h1>Toplam Oy</h1>
+        <h1>Toplam</h1>
         <h2>{totalVotes}</h2>
         <div className="candidates__buttons">
           <button className="candidates__save" aria-label="Save vote">
