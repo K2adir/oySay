@@ -4,6 +4,22 @@ import Recep from "../assets/receo.webp";
 import Kemal from "../assets/kemo.webp";
 import Gecersiz from "../assets/gecersiz.webp";
 
+const useDebounce = (func, delay) => {
+  const [isInvoking, setIsInvoking] = useState(false);
+
+  const debouncedFunc = useCallback(() => {
+    if (!isInvoking) {
+      setIsInvoking(true);
+      setTimeout(() => {
+        func();
+        setIsInvoking(false);
+      }, delay);
+    }
+  }, [func, isInvoking, delay]);
+
+  return debouncedFunc;
+};
+
 const CandidateProfile = ({
   imgSrc,
   imgAlt,
@@ -12,36 +28,17 @@ const CandidateProfile = ({
   totalVotes,
   setTotalVotes,
 }) => {
-  const [isVoteBtnDisabled, setIsVoteBtnDisabled] = useState(false);
+  const incrementVote = useDebounce(() => {
+    setVoteCount(voteCount + 1);
+    setTotalVotes(totalVotes + 1);
+  }, 250);
 
-  const debounce = (func, delay = 300) => {
-    let timeoutId;
-    return () => {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-        func.apply();
-        setIsVoteBtnDisabled(false);
-      }, delay);
-    };
-  };
-
-  const incrementVote = useCallback(
-    debounce(() => {
-      setVoteCount(voteCount + 1);
-      setTotalVotes(totalVotes + 1);
-    }),
-    [voteCount, totalVotes]
-  );
-
-  const decrementVote = useCallback(
-    debounce(() => {
-      if (voteCount > 0) {
-        setVoteCount(voteCount - 1);
-        setTotalVotes(totalVotes - 1);
-      }
-    }),
-    [voteCount, totalVotes]
-  );
+  const decrementVote = useDebounce(() => {
+    if (voteCount > 0) {
+      setVoteCount(voteCount - 1);
+      setTotalVotes(totalVotes - 1);
+    }
+  }, 250);
 
   return (
     <div className="candidates__profile">
@@ -50,7 +47,6 @@ const CandidateProfile = ({
         <button
           className="candidates__button"
           onClick={incrementVote}
-          disabled={isVoteBtnDisabled}
           aria-label="Increase vote"
         >
           +
@@ -59,7 +55,6 @@ const CandidateProfile = ({
         <button
           className="candidates__button"
           onClick={decrementVote}
-          disabled={isVoteBtnDisabled}
           aria-label="Decrease vote"
         >
           -
