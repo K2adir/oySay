@@ -1,0 +1,40 @@
+.candidates__container {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  .candidates__image {
+    width: 20vw;
+    @media screen and (max-width: 600px) {
+      width: 35vw;
+    }
+  }
+
+  .candidates__profile {
+    outline: 1px solid green;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .candidates__buttons {
+      display: flex;
+      flex-direction: column;
+
+      .candidates__button {
+        align-self: center;
+        width: 30vw;
+        height: 10vh;
+      }
+    }
+
+    .candidates__save {
+      height: 3rem;
+    }
+  }
+}
