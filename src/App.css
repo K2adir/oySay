@@ -9,7 +9,14 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #333549;
+}
+
+.app {
+  max-width: 900px;
 }
 
 .dashboard__container {

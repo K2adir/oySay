@@ -7,11 +7,17 @@
   width: 42vw;
 
   //
-  h5 {
-    // can name text
+  .voteCounter_name {
+    padding: 3px 0;
     background-color: #c00000;
-    padding: 6px 5px 4px 5px;
-    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h5 {
+      // can name text
+      // padding: 4px 5px;
+      line-height: 1;
+    }
   }
   //
 

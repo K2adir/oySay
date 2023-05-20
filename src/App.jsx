@@ -7,13 +7,13 @@ import { VoteProvider } from "./context/VoteContext";
 
 function App() {
   return (
-    <>
+    <div className="app">
       <VoteProvider>
         <Profile />
         <VoteCounter />
         <ProfileVoteAdd />
       </VoteProvider>
-    </>
+    </div>
   );
 }
 
