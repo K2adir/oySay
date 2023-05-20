@@ -1,15 +1,33 @@
-.profile__add_btn {
-  width: 42vw;
-  height: 17vw;
-  font-size: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #86c600;
-  border: none;
-  cursor: pointer;
-  border-radius: 10px;
-  .react__plus {
-    color: white;
+.dashboard__container {
+  .profile__add_btn {
+    width: 42vw;
+    height: 17vw;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #86c600;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    .react__plus {
+      color: white;
+    }
+  }
+  .profile__minus_btn {
+    width: 42vw;
+    height: 13vw;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b1b1b1;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .profile__minus_btn:active {
+    transition: background-color 0.7s ease;
+    background-color: #c00000;
   }
 }

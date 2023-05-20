@@ -8,6 +8,10 @@
   font-family: "Montserrat", sans-serif;
 }
 
+body {
+  background-color: #333549;
+}
+
 .dashboard__container {
   padding-top: 0.5rem;
   position: relative;
