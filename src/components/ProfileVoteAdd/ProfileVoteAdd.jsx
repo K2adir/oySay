@@ -5,8 +5,14 @@ import { HiOutlinePlus } from "react-icons/hi";
 import { HiMinus } from "react-icons/hi";
 
 const ProfileVoteAdd = () => {
-  const { recepVotes, setRecepVotes, kemalVotes, setKemalVotes } =
-    useContext(VoteContext);
+  const {
+    recepVotes,
+    setRecepVotes,
+    kemalVotes,
+    setKemalVotes,
+    gecersizVotes,
+    setGecersizVotes,
+  } = useContext(VoteContext);
 
   return (
     <>
@@ -40,6 +46,31 @@ const ProfileVoteAdd = () => {
         >
           <HiMinus style={{ color: "white" }} />
         </button>
+      </div>
+      {/* // VOID */}
+
+      <div className="vote__void">
+        <div className="vote__void_text">
+          <h4>GECERSIZ OY</h4>
+        </div>
+        <div className="vote__void_buttons">
+          <button
+            className="void__minus_btn"
+            onClick={() =>
+              setGecersizVotes(gecersizVotes === 0 ? 0 : gecersizVotes - 1)
+            }
+          >
+            <HiMinus style={{ color: "white" }} />
+          </button>
+          <button
+            className="void__plus_btn"
+            onClick={() =>
+              setGecersizVotes(gecersizVotes === 0 ? 0 : gecersizVotes + 1)
+            }
+          >
+            <HiOutlinePlus style={{ color: "white" }} />
+          </button>
+        </div>
       </div>
     </>
   );

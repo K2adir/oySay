@@ -1,7 +1,7 @@
 .dashboard__container {
   .profile__add_btn {
     width: 42vw;
-    height: 17vh;
+    height: 14vh;
     font-size: 3rem;
     display: flex;
     justify-content: center;
@@ -16,7 +16,7 @@
   }
   .profile__minus_btn {
     width: 42vw;
-    height: 13vh;
+    height: 11vh;
     font-size: 3rem;
     display: flex;
     justify-content: center;
@@ -30,4 +30,50 @@
     transition: background-color 0.1s ease-in-out;
     background-color: #c00000;
   }
+}
+
+.vote__void {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.vote__void_text {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  flex: 1.6; /* text takes 2/4 of the available space */
+  padding: 0 1rem; /* To give some space around the text */
+  height: 3rem;
+  color: #6a6c7b;
+}
+
+.vote__void_buttons {
+  display: flex;
+  flex: 2; /* buttons together take 2/4 of the available space */
+  justify-content: space-around;
+  gap: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.void__minus_btn,
+.void__plus_btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  //   width: calc(50% - 0.6rem);
+  width: 20vw;
+  height: 3rem;
+  border: none;
+}
+
+.void__minus_btn {
+  background-color: #b1b1b1;
+}
+
+.void__plus_btn {
+  background-color: #86c600;
 }
