@@ -1,0 +1,9 @@
+.dashboard__container {
+  display: flex;
+  justify-content: space-evenly;
+  img {
+    width: 8rem;
+    border-radius: 50%;
+    border: 3px solid red;
+  }
+}
