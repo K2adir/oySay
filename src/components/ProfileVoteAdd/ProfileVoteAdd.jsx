@@ -30,13 +30,13 @@ const ProfileVoteAdd = () => {
       <div className="dashboard__container">
         <button
           className="profile__minus_btn"
-          onClick={() => setRecepVotes(recepVotes - 1)}
+          onClick={() => setRecepVotes(recepVotes === 0 ? 0 : recepVotes - 1)}
         >
           <HiMinus style={{ color: "white" }} />
         </button>
         <button
           className="profile__minus_btn"
-          onClick={() => setKemalVotes(kemalVotes - 1)}
+          onClick={() => setKemalVotes(kemalVotes === 0 ? 0 : kemalVotes - 1)}
         >
           <HiMinus style={{ color: "white" }} />
         </button>
