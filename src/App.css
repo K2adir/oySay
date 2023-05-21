@@ -2,7 +2,7 @@
 * {
   padding: 0;
   margin: 0;
-  outline: 1px dashed orange;
+  /* outline: 1px dashed orange; */
   box-sizing: border-box;
   line-height: 1;
   font-family: "Montserrat", sans-serif;
