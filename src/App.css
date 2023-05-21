@@ -15,9 +15,8 @@ body {
 
   justify-content: center;
 
-  align-items: center;
-
   background-color: #333549;
+  margin-top: 0.5rem;
 }
 
 .app {
