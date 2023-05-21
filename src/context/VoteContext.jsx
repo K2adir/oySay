@@ -7,7 +7,7 @@ export const VoteProvider = ({ children }) => {
   const [kemalVotes, setKemalVotes] = useState(0);
   const [gecersizVotes, setGecersizVotes] = useState(0);
   const [reset, setReset] = useState(false);
-  //
+
   useEffect(() => {
     if (reset) {
       setGecersizVotes(0);
@@ -21,6 +21,13 @@ export const VoteProvider = ({ children }) => {
     setReset(true);
   };
 
+  const delayedVoteUpdate = (voteFunction) => {
+    return (voteValue) => {
+      voteFunction(voteValue);
+      setTimeout(() => {}, 100);
+    };
+  };
+
   const totalVotes = recepVotes + kemalVotes + gecersizVotes;
   const validVotes = recepVotes + kemalVotes;
 
@@ -28,11 +35,11 @@ export const VoteProvider = ({ children }) => {
     <VoteContext.Provider
       value={{
         recepVotes,
-        setRecepVotes,
+        setRecepVotes: delayedVoteUpdate(setRecepVotes),
         kemalVotes,
-        setKemalVotes,
+        setKemalVotes: delayedVoteUpdate(setKemalVotes),
         gecersizVotes,
-        setGecersizVotes,
+        setGecersizVotes: delayedVoteUpdate(setGecersizVotes),
         totalVotes,
         validVotes,
         resetVotes,
