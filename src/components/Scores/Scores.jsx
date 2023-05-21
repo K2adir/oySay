@@ -3,7 +3,14 @@ import { RxCross1 } from "react-icons/rx";
 import { RxEnvelopeClosed } from "react-icons/rx";
 import { RxEnvelopeOpen } from "react-icons/rx";
 import { MdPeopleOutline } from "react-icons/md";
+import { VoteContext } from "../../context/VoteContext";
+import { useContext } from "react";
+import { HiTemplate } from "react-icons/hi";
+
 const Scores = () => {
+  const { gecersizVotes, setGecersizVotes, totalVotes } =
+    useContext(VoteContext);
+
   return (
     <div className="dashboard__container">
       <div className="scores__container">
@@ -15,7 +22,7 @@ const Scores = () => {
             <h4>Geçersiz Oy</h4>
           </div>
           <div className="scores__result">
-            <h4>10</h4>
+            <h4>{gecersizVotes}</h4>
           </div>
         </div>
         {/* /// */}
@@ -28,7 +35,7 @@ const Scores = () => {
             <h4>Açılan Zarf</h4>
           </div>
           <div className="scores__result">
-            <h4>10</h4>
+            <h4>{totalVotes}</h4>
           </div>
         </div>
         {/*  */}

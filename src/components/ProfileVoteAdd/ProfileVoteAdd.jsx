@@ -56,17 +56,19 @@ const ProfileVoteAdd = () => {
         <div className="vote__void_buttons">
           <button
             className="void__minus_btn"
-            onClick={() =>
-              setGecersizVotes(gecersizVotes === 0 ? 0 : gecersizVotes - 1)
-            }
+            onClick={() => {
+              console.log(gecersizVotes);
+              setGecersizVotes(gecersizVotes === 0 ? 0 : gecersizVotes - 1);
+            }}
           >
             <HiMinus style={{ color: "white" }} />
           </button>
           <button
             className="void__plus_btn"
-            onClick={() =>
-              setGecersizVotes(gecersizVotes === 0 ? 0 : gecersizVotes + 1)
-            }
+            onClick={() => {
+              console.log(gecersizVotes);
+              setGecersizVotes(gecersizVotes + 1);
+            }}
           >
             <HiOutlinePlus style={{ color: "white" }} />
           </button>
