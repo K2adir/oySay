@@ -12,13 +12,13 @@ function App() {
   return (
     <div className="app">
       <VoteProvider>
-        <Reset />
         <Profile />
         <VoteCounter />
         <ProfileVoteAdd />
 
         <VoidVote />
         <Scores />
+        <Reset />
       </VoteProvider>
     </div>
   );

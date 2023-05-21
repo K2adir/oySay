@@ -9,8 +9,13 @@
 }
 
 body {
+  height: 100vh;
+  outline: 1px dashed red;
   display: flex;
+
   justify-content: center;
+
+  align-items: center;
 
   background-color: #333549;
 }

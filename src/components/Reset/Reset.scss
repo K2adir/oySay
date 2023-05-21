@@ -1,14 +1,14 @@
 .reset__container {
   width: 100% !important;
   position: relative;
-  padding-bottom: 2.5rem;
+  padding-top: 1rem;
 }
 .reset__back {
   height: 2.5rem;
-  position: absolute;
-  width: 100vw !important;
-  transform: translate(-1rem, 0%);
-  outline: 1px solid red;
+
+  width: 100% !important;
+  //   transform: translate(-1rem, 0%);
+  outline: 1px solid white;
   display: flex;
   justify-content: center;
 
@@ -22,7 +22,7 @@
     width: 100%;
     gap: 0.5rem;
     color: #8697a3;
-    background-color: black;
+    background-color: #333549;
     span {
       display: flex;
       font-size: 1.3rem;
