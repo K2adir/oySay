@@ -8,6 +8,7 @@ export const VoteProvider = ({ children }) => {
   const [gecersizVotes, setGecersizVotes] = useState(0);
 
   const totalVotes = recepVotes + kemalVotes + gecersizVotes;
+  const validVotes = recepVotes + kemalVotes;
 
   return (
     <VoteContext.Provider
@@ -19,6 +20,7 @@ export const VoteProvider = ({ children }) => {
         gecersizVotes,
         setGecersizVotes,
         totalVotes,
+        validVotes,
       }}
     >
       {children}

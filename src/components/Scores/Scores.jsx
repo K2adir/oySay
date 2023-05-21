@@ -2,13 +2,15 @@ import "./Scores.scss";
 import { RxCross1 } from "react-icons/rx";
 import { RxEnvelopeClosed } from "react-icons/rx";
 import { RxEnvelopeOpen } from "react-icons/rx";
+import { HiOutlineCheck } from "react-icons/hi";
+
 import { MdPeopleOutline } from "react-icons/md";
 import { VoteContext } from "../../context/VoteContext";
 import { useContext } from "react";
 import { HiTemplate } from "react-icons/hi";
 
 const Scores = () => {
-  const { gecersizVotes, setGecersizVotes, totalVotes } =
+  const { gecersizVotes, setGecersizVotes, totalVotes, validVotes } =
     useContext(VoteContext);
 
   return (
@@ -29,13 +31,13 @@ const Scores = () => {
         {/* /// */}
         <div className="scores__row">
           <div className="scores__icon">
-            <RxEnvelopeOpen />
+            <HiOutlineCheck />
           </div>
           <div className="scores__text">
-            <h4>Açılan Zarf</h4>
+            <h4>Geçerli Zarf</h4>
           </div>
           <div className="scores__result">
-            <h4>{totalVotes}</h4>
+            <h4>{validVotes}</h4>
           </div>
         </div>
         {/*  */}
@@ -45,15 +47,15 @@ const Scores = () => {
             <RxEnvelopeClosed />
           </div>
           <div className="scores__text">
-            <h4>Sandıktan Çıkan Zarf</h4>
+            <h4>Toplam Zarf</h4>
           </div>
           <div className="scores__result">
-            <h4>10</h4>
+            <h4>{totalVotes}</h4>
           </div>
         </div>
         {/*  */}
         {/*  */}
-        <div className="scores__row">
+        {/* <div className="scores__row">
           <div className="scores__icon">
             <MdPeopleOutline />
           </div>
@@ -63,7 +65,7 @@ const Scores = () => {
           <div className="scores__result">
             <h4>10</h4>
           </div>
-        </div>
+        </div> */}
         {/*  */}
         {/*  */}
       </div>
