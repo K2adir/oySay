@@ -34,7 +34,7 @@ const Scores = () => {
             <HiOutlineCheck />
           </div>
           <div className="scores__text">
-            <h4>Geçerli Zarf</h4>
+            <h4>Geçerli Oy</h4>
           </div>
           <div className="scores__result">
             <h4>{validVotes}</h4>
@@ -47,7 +47,7 @@ const Scores = () => {
             <RxEnvelopeClosed />
           </div>
           <div className="scores__text">
-            <h4>Toplam Zarf</h4>
+            <h4>Toplam Oy</h4>
           </div>
           <div className="scores__result">
             <h4>{totalVotes}</h4>

@@ -8,14 +8,14 @@ import { HiMinus } from "react-icons/hi";
 const VoidVote = () => {
   const { gecersizVotes, setGecersizVotes } = useContext(VoteContext);
   return (
-    <div className="dashboard__container">
+    <div className="dashboard__container container">
       <div className="void__container">
         <div className="void__text">
-          <h4>GECERSIZ OY</h4>
+          <h4>Gercersiz Oy</h4>
         </div>
-        <div className="void__buttons">
+        <div className="void_buttons">
           <button
-            className="void__minus_btn"
+            className="void__minus_btn btn"
             onClick={() => {
               console.log(gecersizVotes);
               setGecersizVotes(gecersizVotes === 0 ? 0 : gecersizVotes - 1);
@@ -24,7 +24,7 @@ const VoidVote = () => {
             <HiMinus style={{ color: "white" }} />
           </button>
           <button
-            className="void__plus_btn"
+            className="void__plus_btn btn"
             onClick={() => {
               console.log(gecersizVotes);
               setGecersizVotes(gecersizVotes + 1);
@@ -39,3 +39,14 @@ const VoidVote = () => {
 };
 
 export default VoidVote;
+
+//  <button
+//             className="void__minus_btn"
+//             onClick={() => {
+//               console.log(gecersizVotes);
+//               setGecersizVotes(gecersizVotes === 0 ? 0 : gecersizVotes - 1);
+//             }}
+//           >
+//             <HiMinus style={{ color: "white" }} />
+//           </button>
+//

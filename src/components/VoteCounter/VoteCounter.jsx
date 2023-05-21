@@ -6,12 +6,8 @@ import { useContext } from "react";
 const VoteCounter = () => {
   const {
     recepVotes,
-    setRecepVotes,
+
     kemalVotes,
-    setKemalVotes,
-    gecersizVotes,
-    setGecersizVotes,
-    totalVotes,
   } = useContext(VoteContext);
   return (
     <>

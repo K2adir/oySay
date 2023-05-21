@@ -1,44 +1,44 @@
 .void__container {
+  padding: 0rem 0rem;
   display: flex;
-  //   margin-top: 0.5rem;
+  width: calc(100%);
+  outline: 1px solid yellow;
   gap: 0.5rem;
-  width: 100%;
+  justify-content: start;
   .void__text {
-    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
     background-color: #f1f1f1;
-    width: 50%;
+    display: flex;
+    // outline: 2px dashed red;
+    width: calc(42vw);
     height: 3rem;
     color: #6a6c7b;
   }
-  .void__buttons {
+
+  .void_buttons {
     display: flex;
-    width: 50%;
-    justify-content: space-around;
-    width: 50%;
+    width: 42vw;
     gap: 0.5rem;
+    .btn {
+      cursor: pointer;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      font-size: 2rem;
+      border: none;
+      background-color: #86c600;
+    }
+    .void__minus_btn {
+      background-color: #b1b1b1;
+    }
+    .void__minus_btn:active {
+      transition: background-color 0.1s ease-in-out;
+      background-color: #c00000;
+    }
   }
-}
-
-.void__minus_btn,
-.void__plus_btn {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-
-  width: 100%;
-  height: 3rem;
-  border: none;
-}
-
-.void__minus_btn {
-  background-color: #b1b1b1;
-}
-
-.void__plus_btn {
-  background-color: #86c600;
 }
