@@ -14,7 +14,7 @@ const VoteCounter = () => {
       <div className="dashboard__container">
         <div className="voteCounter">
           <div className="voteCounter_name recep">
-            <h5>Recep Tayyip Erdogan</h5>
+            <h5>RECEP TAYYİP ERDOĞAN</h5>
           </div>
 
           <div className="voteAmount">
@@ -23,7 +23,7 @@ const VoteCounter = () => {
         </div>
         <div className="voteCounter">
           <div className="voteCounter_name">
-            <h5>Kemal Kilicdaroglu</h5>
+            <h5>KEMAL KILIÇDAROĞLU</h5>
           </div>
           <div className="voteAmount">
             <h4>{kemalVotes}</h4>

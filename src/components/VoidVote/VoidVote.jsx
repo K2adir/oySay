@@ -11,7 +11,7 @@ const VoidVote = () => {
     <div className="dashboard__container container">
       <div className="void__container">
         <div className="void__text">
-          <h4>Gecersiz Oy</h4>
+          <h4>Geçersiz Oy</h4>
         </div>
         <div className="void_buttons">
           <button

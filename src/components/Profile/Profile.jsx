@@ -5,8 +5,8 @@ import Recep from "../../assets/receo.webp";
 const Profile = () => {
   return (
     <div className="dashboard__container">
-      <img src={Recep} alt="recep tayyip erdogan" />
-      <img src={Kemal} className="profile__kemal" alt="kemal kilicdaroglu" />
+      <img src={Recep} alt="RECEP TAYYİP ERDOĞAN" />
+      <img src={Kemal} className="profile__kemal" alt="KEMAL KILIÇDAROĞLU" />
     </div>
   );
 };
