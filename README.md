@@ -1,5 +1,5 @@
 # oySay
-Vote counter app for the upcoming elections in Turkey!
+Vote counter app for the upcoming elections in Turkey
 
 Vite + React + SCSS
 https://oy-say.vercel.app/
