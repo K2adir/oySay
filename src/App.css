@@ -25,6 +25,7 @@ body {
 
 .app {
   max-width: 700px;
+  background-color: #333549;
 }
 
 .dashboard__container {
@@ -40,4 +41,24 @@ body {
   gap: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.exportasimage {
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px 0;
+  background: transparent;
+  border: 1px solid #8697a3;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #8697a3;
+}
+
+.exportasimage:hover {
+  border: 1px solid #ccc;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  color: #ccc;
 }
