@@ -3,13 +3,26 @@ import { createContext, useState, useEffect } from "react";
 export const VoteContext = createContext();
 
 export const VoteProvider = ({ children }) => {
-  const [recepVotes, setRecepVotes] = useState(0);
-  const [kemalVotes, setKemalVotes] = useState(0);
-  const [gecersizVotes, setGecersizVotes] = useState(0);
+  const [recepVotes, setRecepVotes] = useState(
+    () => JSON.parse(localStorage.getItem("recepVotes")) || 0
+  );
+  const [kemalVotes, setKemalVotes] = useState(
+    () => JSON.parse(localStorage.getItem("kemalVotes")) || 0
+  );
+  const [gecersizVotes, setGecersizVotes] = useState(
+    () => JSON.parse(localStorage.getItem("gecersizVotes")) || 0
+  );
   const [reset, setReset] = useState(false);
 
   useEffect(() => {
+    localStorage.setItem("recepVotes", JSON.stringify(recepVotes));
+    localStorage.setItem("kemalVotes", JSON.stringify(kemalVotes));
+    localStorage.setItem("gecersizVotes", JSON.stringify(gecersizVotes));
+  }, [recepVotes, kemalVotes, gecersizVotes]);
+
+  useEffect(() => {
     if (reset) {
+      localStorage.clear(); // clear localStorage on reset
       setGecersizVotes(0);
       setKemalVotes(0);
       setRecepVotes(0);

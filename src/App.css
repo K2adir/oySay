@@ -9,7 +9,7 @@
 }
 
 body {
-  height: 100vh;
+  height: 100dvh;
   outline: 1px dashed red;
   display: flex;
 
