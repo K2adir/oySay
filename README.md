@@ -1,6 +1,8 @@
 # oySay
-Vote counter app for the upcoming elections in Turkey
+Vote counter app for the upcoming elections in Turkey.
+
 Designed for Mobile use only.
+
 Vite + React + SCSS
 
 useContext - localstorage and few other things here and there
