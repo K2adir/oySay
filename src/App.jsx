@@ -1,4 +1,5 @@
 import "./App.css";
+import Credits from "./components/Credits/Credits";
 // import Candidates from "./components/Candidates";
 import Profile from "./components/Profile/Profile";
 import ProfileVoteAdd from "./components/ProfileVoteAdd/ProfileVoteAdd";
@@ -20,6 +21,7 @@ function App() {
         <Scores />
         <Reset />
       </VoteProvider>
+      <Credits />
     </div>
   );
 }

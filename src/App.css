@@ -10,7 +10,7 @@
 
 body {
   height: 100dvh;
-  outline: 1px dashed red;
+  /* outline: 1px dashed red; */
   display: flex;
 
   justify-content: center;
