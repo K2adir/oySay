@@ -9,9 +9,12 @@
   img {
     width: 7rem;
     border-radius: 50%;
-    border: 3px solid red;
+    outline: 2px solid #034d92;
     @media screen and (max-height: 570px) {
       display: none;
     }
+  }
+  .profile__kemal {
+    outline: 2px solid #c00000;
   }
 }

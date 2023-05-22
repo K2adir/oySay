@@ -6,7 +6,7 @@ const Profile = () => {
   return (
     <div className="dashboard__container">
       <img src={Recep} alt="recep tayyip erdogan" />
-      <img src={Kemal} alt="kemal kilicdaroglu" />
+      <img src={Kemal} className="profile__kemal" alt="kemal kilicdaroglu" />
     </div>
   );
 };
