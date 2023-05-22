@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { Fragment, useRef } from "react";
 import "./App.css";
 // import Candidates from "./components/Candidates";
 import Profile from "./components/Profile/Profile";
@@ -14,14 +14,17 @@ function App() {
   const exportRef = useRef();
 
   return (
-    <div className="app" ref={exportRef}>
-      <VoteProvider>
-        <Profile />
-        <VoteCounter />
-        <ProfileVoteAdd />
+    <div className="app" >
 
-        <VoidVote />
-        <Scores />
+      <VoteProvider>
+        <div ref={exportRef} className="imageWrapper">
+          <Profile />
+          <VoteCounter />
+          <ProfileVoteAdd />
+
+          <VoidVote />
+          <Scores />
+        </div>
         <Reset />
       </VoteProvider>
       <button onClick={() => exportAsImage(exportRef.current, "oysayimi")} className="exportasimage">

@@ -25,7 +25,6 @@ body {
 
 .app {
   max-width: 700px;
-  background-color: #333549;
 }
 
 .dashboard__container {
@@ -41,6 +40,11 @@ body {
   gap: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.imageWrapper {
+  padding-bottom: 12px;
+  background-color: #333549;
 }
 
 .exportasimage {
