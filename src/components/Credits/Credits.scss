@@ -57,9 +57,10 @@
         display: flex;
         color: #707070;
       }
-      svg {
-        // margin-bottom: 2px;
-      }
     }
   }
+}
+.input__input::placeholder {
+  color: black;
+  font-weight: 600;
 }
