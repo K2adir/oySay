@@ -28,7 +28,7 @@ function App() {
           <Scores />
           <Inputs />
         </div>
-        <div className="reset__shot">
+        <div className="reset__shot dashboard__container">
           <button
             onClick={() => exportAsImage(exportRef.current, "oysayimi")}
             className="exportasimage reset__button"
