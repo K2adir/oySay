@@ -1,5 +1,5 @@
 import { Fragment, useRef } from "react";
-import "./App.css";
+import "./App.scss";
 import Credits from "./components/Credits/Credits";
 // import Candidates from "./components/Candidates";
 import Profile from "./components/Profile/Profile";
@@ -10,13 +10,14 @@ import VoidVote from "./components/VoidVote/VoidVote";
 import VoteCounter from "./components/VoteCounter/VoteCounter";
 import { VoteProvider } from "./context/VoteContext";
 import exportAsImage from "./utils/exportAsImage";
+import Inputs from "./components/Inputs/Inputs";
 
+//
 function App() {
   const exportRef = useRef();
 
   return (
-    <div className="app" >
-
+    <div className="app">
       <VoteProvider>
         <div ref={exportRef} className="imageWrapper">
           <Profile />
@@ -25,16 +26,19 @@ function App() {
 
           <VoidVote />
           <Scores />
+          <Inputs />
         </div>
-        <Reset />
+        <div className="reset__shot dashboard__container">
+          <button
+            onClick={() => exportAsImage(exportRef.current, "oysayimi")}
+            className="exportasimage reset__button"
+          >
+            Ekran Görüntüsü
+          </button>
+          <Reset />
+        </div>
       </VoteProvider>
-
-     
-
-      <button onClick={() => exportAsImage(exportRef.current, "oysayimi")} className="exportasimage">
-        Ekran Görüntüsü Al
-      </button>
-
+      <Credits />
     </div>
   );
 }

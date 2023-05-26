@@ -27,6 +27,13 @@ body {
   max-width: 700px;
 }
 
+button:active {
+  scale: 0.97;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .dashboard__container {
   padding-top: 0.5rem;
   position: relative;
@@ -43,19 +50,20 @@ body {
 }
 
 .imageWrapper {
-  padding-bottom: 12px;
+  padding-bottom: 1rem;
   background-color: #333549;
 }
 
 .exportasimage {
+  height: 2.5rem;
   cursor: pointer;
-  margin-top: 10px;
+  //   margin-top: 10px;
   width: 100%;
-  padding: 12px 0;
+
   background: transparent;
   border: 1px solid #8697a3;
   border-radius: 10px;
-  font-size: 16px;
+  font-size: 1rem;
   color: #8697a3;
 }
 
@@ -65,4 +73,12 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   color: #ccc;
+}
+
+.reset__shot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
 }

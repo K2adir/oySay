@@ -1,12 +1,10 @@
 .voteCounter {
-  // can. name
   color: #ffff;
   font-size: 0.8rem;
   text-align: center;
   justify-content: center;
   width: 42vw;
 
-  //
   .voteCounter_name {
     padding: 3px 0;
     height: 1.5rem;
@@ -14,28 +12,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     h5 {
-      // can name text
-      // padding: 4px 5px;
       line-height: 1;
     }
+
     &.recep {
       background-color: #034d92;
     }
   }
-  //
 
   .voteAmount {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
     background-color: #f1f1f1;
     border-radius: 0px 0px 10px 10px;
+    display: table;
+    width: 100%;
 
     h4 {
       font-size: 3rem;
       color: #8697a3;
+      margin: 0;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
     }
   }
 }
