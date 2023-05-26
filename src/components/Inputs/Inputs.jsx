@@ -6,7 +6,7 @@ const Inputs = () => {
     <div className="dashboard__container input__container">
       <input placeholder="Okul Adı:" />
       <input
-        type="number"
+        // type="number"
         inputMode="numeric"
         pattern="[0-9]*"
         placeholder="Sandık No:"
