@@ -13,7 +13,7 @@ const VoidVote = () => {
         <div className="void__text">
           <h4>Geçersiz Oy</h4>
         </div>
-        <div className="void_buttons">
+        <div className="void_buttons ">
           <button
             className="void__minus_btn btn"
             onClick={() => {

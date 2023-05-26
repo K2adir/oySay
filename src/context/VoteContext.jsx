@@ -20,9 +20,15 @@ export const VoteProvider = ({ children }) => {
     }
   };
 
-  const [recepVotes, setRecepVotes] = useState(() => getLocalStorage("recepVotes", 0));
-  const [kemalVotes, setKemalVotes] = useState(() => getLocalStorage("kemalVotes", 0));
-  const [gecersizVotes, setGecersizVotes] = useState(() => getLocalStorage("gecersizVotes", 0));
+  const [recepVotes, setRecepVotes] = useState(() =>
+    getLocalStorage("recepVotes", 0)
+  );
+  const [kemalVotes, setKemalVotes] = useState(() =>
+    getLocalStorage("kemalVotes", 0)
+  );
+  const [gecersizVotes, setGecersizVotes] = useState(() =>
+    getLocalStorage("gecersizVotes", 0)
+  );
   const [reset, setReset] = useState(false);
 
   useEffect(() => {
@@ -36,7 +42,9 @@ export const VoteProvider = ({ children }) => {
       try {
         localStorage.clear(); // clear localStorage on reset
       } catch (error) {
-        console.warn("Failed to clear localStorage. Votes may persist between sessions.")
+        console.warn(
+          "Failed to clear localStorage. Votes may persist between sessions."
+        );
       }
       setGecersizVotes(0);
       setKemalVotes(0);
@@ -52,7 +60,7 @@ export const VoteProvider = ({ children }) => {
   const delayedVoteUpdate = (voteFunction) => {
     return (voteValue) => {
       voteFunction(voteValue);
-      setTimeout(() => { }, 100);
+      setTimeout(() => {}, 100);
     };
   };
 

@@ -7,14 +7,14 @@ import { FaCat } from "react-icons/fa";
 
 const CREDITS_DATA = [
   {
-    name: "Code - Kadir Kirisci:",
+    name: "Kadir Kirisci:",
     links: [
       { url: "https://github.com/K2adir/oySay", icon: FiGithub },
       { url: "https://www.instagram.com/k2adir/", icon: FiInstagram },
     ],
   },
   {
-    name: "UI - Deniz Turan:",
+    name: "Deniz Turan:",
     links: [
       { url: "https://www.linkedin.com/in/deniz-t/", icon: BsLinkedin },
       { url: "https://instagram.com/b.denizturan", icon: FiInstagram },
