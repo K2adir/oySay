@@ -3,26 +3,41 @@ import { createContext, useState, useEffect } from "react";
 export const VoteContext = createContext();
 
 export const VoteProvider = ({ children }) => {
-  const [recepVotes, setRecepVotes] = useState(
-    () => JSON.parse(localStorage.getItem("recepVotes")) || 0
-  );
-  const [kemalVotes, setKemalVotes] = useState(
-    () => JSON.parse(localStorage.getItem("kemalVotes")) || 0
-  );
-  const [gecersizVotes, setGecersizVotes] = useState(
-    () => JSON.parse(localStorage.getItem("gecersizVotes")) || 0
-  );
+  const getLocalStorage = (key, defaultValue) => {
+    try {
+      return JSON.parse(localStorage.getItem(key)) || defaultValue;
+    } catch (error) {
+      console.warn(`Failed to get ${key} from localStorage.`);
+      return defaultValue;
+    }
+  };
+
+  const setLocalStorage = (key, value) => {
+    try {
+      localStorage.setItem(key, JSON.stringify(value));
+    } catch (error) {
+      console.warn(`Failed to set ${key} to localStorage.`);
+    }
+  };
+
+  const [recepVotes, setRecepVotes] = useState(() => getLocalStorage("recepVotes", 0));
+  const [kemalVotes, setKemalVotes] = useState(() => getLocalStorage("kemalVotes", 0));
+  const [gecersizVotes, setGecersizVotes] = useState(() => getLocalStorage("gecersizVotes", 0));
   const [reset, setReset] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem("recepVotes", JSON.stringify(recepVotes));
-    localStorage.setItem("kemalVotes", JSON.stringify(kemalVotes));
-    localStorage.setItem("gecersizVotes", JSON.stringify(gecersizVotes));
+    setLocalStorage("recepVotes", recepVotes);
+    setLocalStorage("kemalVotes", kemalVotes);
+    setLocalStorage("gecersizVotes", gecersizVotes);
   }, [recepVotes, kemalVotes, gecersizVotes]);
 
   useEffect(() => {
     if (reset) {
-      localStorage.clear(); // clear localStorage on reset
+      try {
+        localStorage.clear(); // clear localStorage on reset
+      } catch (error) {
+        console.warn("Failed to clear localStorage. Votes may persist between sessions.")
+      }
       setGecersizVotes(0);
       setKemalVotes(0);
       setRecepVotes(0);
@@ -37,7 +52,7 @@ export const VoteProvider = ({ children }) => {
   const delayedVoteUpdate = (voteFunction) => {
     return (voteValue) => {
       voteFunction(voteValue);
-      setTimeout(() => {}, 100);
+      setTimeout(() => { }, 100);
     };
   };
 
