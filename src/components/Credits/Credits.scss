@@ -15,28 +15,25 @@
     color: white;
   }
 
-  .credits__content {
+  .credits__content_hide {
     display: none;
   }
 
-  p {
-    margin: 0;
+  .credits__content {
+    display: flex;
+    gap: 1rem;
+    line-height: 0;
 
-    span {
-      outline: 1px solid green;
+    .credits__name {
+      line-height: 0;
+      font-size: 1.6rem;
+    }
+    .credits__icon {
       display: flex;
-      justify-content: start;
-      align-items: center;
-      gap: 1.5rem;
-      font-size: 1.5rem;
-      color: #707070;
-
+      font-size: 1.6rem;
+      gap: 2rem;
       svg {
-        height: 1.5rem;
-        width: 1.5rem;
-      }
-      .credit__icon {
-        padding-left: 1rem;
+        // margin-bottom: 2px;
       }
     }
   }
