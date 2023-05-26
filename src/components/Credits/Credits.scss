@@ -1,0 +1,22 @@
+.credits__container {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  color: #707070;
+  button {
+    font-size: 1.5rem;
+    border: none;
+    background: none;
+    color: white;
+  }
+}
+
+.credits_btn_up .credits__content {
+  display: block;
+}
+
+.credits__content {
+  display: none;
+}

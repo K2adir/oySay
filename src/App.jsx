@@ -1,5 +1,6 @@
 import { Fragment, useRef } from "react";
 import "./App.css";
+import Credits from "./components/Credits/Credits";
 // import Candidates from "./components/Candidates";
 import Profile from "./components/Profile/Profile";
 import ProfileVoteAdd from "./components/ProfileVoteAdd/ProfileVoteAdd";
@@ -27,9 +28,13 @@ function App() {
         </div>
         <Reset />
       </VoteProvider>
+
+     
+
       <button onClick={() => exportAsImage(exportRef.current, "oysayimi")} className="exportasimage">
         Ekran Görüntüsü Al
       </button>
+
     </div>
   );
 }
