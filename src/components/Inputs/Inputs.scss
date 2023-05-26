@@ -1,0 +1,17 @@
+.input__container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    font-size: 1rem;
+    background-color: #c8c9ca;
+    text-align: center;
+    // border-radius: 10px;
+    width: 100%;
+    border: none;
+    height: 1.5rem;
+  }
+}

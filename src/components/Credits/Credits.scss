@@ -5,18 +5,39 @@
   align-items: start;
   justify-content: start;
   color: #707070;
+  font-size: 1.5rem;
+  outline: 1px solid red;
+
   button {
     font-size: 1.5rem;
     border: none;
     background: none;
     color: white;
   }
-}
 
-.credits_btn_up .credits__content {
-  display: block;
-}
+  .credits__content {
+    display: none;
+  }
 
-.credits__content {
-  display: none;
+  p {
+    margin: 0;
+
+    span {
+      outline: 1px solid green;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 1.5rem;
+      color: #707070;
+
+      svg {
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+      .credit__icon {
+        padding-left: 1rem;
+      }
+    }
+  }
 }

@@ -1,14 +1,12 @@
 .reset__container {
   width: 100% !important;
   position: relative;
-  padding-top: 0.5rem;
+  padding-top: 10px;
 }
+
 .reset__back {
   height: 2.5rem;
 
-  width: 100% !important;
-  //   transform: translate(-1rem, 0%);
-  //   outline: 1px solid white;
   display: flex;
   justify-content: center;
 
@@ -17,16 +15,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0;
-    border: none;
+    border-radius: 10px;
+    border: 1px solid #8697a3;
     width: 100%;
     gap: 0.5rem;
+    font-size: 1rem;
     color: #8697a3;
-    background-color: #333549;
+    background: transparent;
+
     span {
       display: flex;
       font-size: 1.3rem;
-      //   outline: 1px dashed darkblue;
     }
   }
+}
+
+.reset__button:hover {
+  border: 1px solid #ccc;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #ccc;
 }
