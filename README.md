@@ -19,4 +19,5 @@ Problem: At the time of writing this, some desktop versions of Firefox have few 
 
 https://oy-say.vercel.app/
 
-![IMG_DF0AAE61FB00-1](https://github.com/K2adir/oySay/assets/1120278/5b1be94c-91fe-418d-ab41-8744ee45e58e)
+
+![Screenshot 2023-05-27 at 7 43 36 PM](https://github.com/K2adir/oySay/assets/1120278/276b3c96-8e6f-4339-8c65-bb69fa915124)
