@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./Credits.scss";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { FiGithub, FiInstagram } from "react-icons/fi";
 import { BsLinkedin } from "react-icons/bs";
 import { FaCat } from "react-icons/fa";
@@ -22,9 +22,15 @@ const CREDITS_DATA = [
   },
   // More credits can be added here
 ];
-
 const Credits = () => {
   const [showCredits, setShowCredits] = useState(false);
+  const endOfCredits = useRef(null);
+
+  useEffect(() => {
+    if (showCredits) {
+      endOfCredits.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [showCredits]);
 
   return (
     <div className="credits__container">
@@ -51,6 +57,7 @@ const Credits = () => {
             </div>
           </div>
         ))}
+        <div ref={endOfCredits} />
       </div>
     </div>
   );
