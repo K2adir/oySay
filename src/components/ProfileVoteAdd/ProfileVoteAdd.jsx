@@ -10,8 +10,8 @@ const ProfileVoteAdd = () => {
     setRecepVotes,
     kemalVotes,
     setKemalVotes,
-    gecersizVotes,
-    setGecersizVotes,
+    // gecersizVotes,
+    // setGecersizVotes,
   } = useContext(VoteContext);
 
   return (

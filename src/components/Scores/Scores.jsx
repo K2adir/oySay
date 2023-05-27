@@ -1,17 +1,14 @@
 import "./Scores.scss";
 import { RxCross1 } from "react-icons/rx";
 import { RxEnvelopeClosed } from "react-icons/rx";
-import { RxEnvelopeOpen } from "react-icons/rx";
+
 import { HiOutlineCheck } from "react-icons/hi";
 
-import { MdPeopleOutline } from "react-icons/md";
 import { VoteContext } from "../../context/VoteContext";
 import { useContext } from "react";
-import { HiTemplate } from "react-icons/hi";
 
 const Scores = () => {
-  const { gecersizVotes, setGecersizVotes, totalVotes, validVotes } =
-    useContext(VoteContext);
+  const { gecersizVotes, totalVotes, validVotes } = useContext(VoteContext);
 
   return (
     <div className="dashboard__container">
@@ -28,7 +25,7 @@ const Scores = () => {
           </div>
         </div>
         {/* /// */}
-        {/* /// */}
+
         <div className="scores__row">
           <div className="scores__icon">
             <HiOutlineCheck />
