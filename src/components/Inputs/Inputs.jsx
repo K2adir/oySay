@@ -10,15 +10,17 @@ const Inputs = () => {
     const inputValue = event.target.value;
     const prefix = "Sandık# ";
 
-    if (inputValue.startsWith(prefix)) {
-      setSandikNo(inputValue);
+    if (inputValue === "") {
+      setSandikNo("");
+    } else if (!inputValue.startsWith(prefix)) {
+      setSandikNo(prefix + inputValue);
     } else {
-      setSandikNo(prefix);
+      setSandikNo(inputValue);
     }
   };
 
   const handleSandikNoBlur = () => {
-    if (sandikNo === "Sandık#") {
+    if (sandikNo === "Sandık# ") {
       setSandikNo("");
     }
   };
