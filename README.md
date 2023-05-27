@@ -15,7 +15,7 @@ On today's regular-sized screens, the full UI will be displayed. However, on old
 
 The entire UI is implemented using flexbox and is responsive. Please note that this app is not optimized for desktop use. If it were designed for desktop, I would consider incorporating keyboard shortcuts for vote increment and decrement functionalities.
 
-Problem: At the time of writing this, some desktop versions of Firefox have few pixels of alignment issues with the <VoteCounter/> component. Other browsers are working fine. Since this isn't desinged for desktop, I will be waiting for the next firefox update. 
+Problem: At the time of writing this, some desktop versions of Firefox have few pixels of alignment issues with the "<VoteCounter/>" component. Other browsers are working fine. Since this isn't desinged for desktop, I will be waiting for the next firefox update. 
 
 https://oy-say.vercel.app/
 
