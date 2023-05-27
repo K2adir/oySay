@@ -6,7 +6,10 @@
   align-items: center;
   padding-left: 1rem;
   padding-right: 1rem;
-
+  input {
+    border-radius: 0;
+    // cursor: pointer;
+  }
   .input__okul {
     display: flex;
     width: 70%;
