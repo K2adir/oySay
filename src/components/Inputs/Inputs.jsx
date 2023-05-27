@@ -24,7 +24,7 @@ const Inputs = () => {
         </label>
         <input
           className="input__input "
-          placeholder="Okul Adı"
+          placeholder="Okul Adı:"
           value={okulAdi}
           onChange={handleOkulAdiChange}
         />
@@ -37,7 +37,7 @@ const Inputs = () => {
           className="input__input"
           inputMode="numeric"
           pattern="[0-9]*"
-          placeholder="Sandık No"
+          placeholder="Sandık:"
           value={sandikNo}
           onChange={handleSandikNoChange}
         />
