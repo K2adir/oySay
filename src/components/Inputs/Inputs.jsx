@@ -8,12 +8,20 @@ const Inputs = () => {
 
   const handleSandikNoChange = (event) => {
     const inputValue = event.target.value;
-    if (inputValue === "Sandık#") {
-      setSandikNo("");
+    const prefix = "Sandık# ";
+
+    if (inputValue.startsWith(prefix)) {
+      const restOfInput = inputValue.slice(prefix.length);
+
+      const hashCount = restOfInput.split("#").length - 1;
+
+      if (hashCount >= 2) {
+        setSandikNo(prefix);
+      } else {
+        setSandikNo(inputValue);
+      }
     } else {
-      setSandikNo(
-        inputValue.startsWith("Sandık#") ? inputValue : `Sandık# ${inputValue}`
-      );
+      setSandikNo(prefix);
     }
   };
 
