@@ -12,12 +12,14 @@ const Reset = () => {
       window.confirm("Sayıları sıfırlamak istediğinize emin misiniz?")
     ) {
       resetVotes();
+      return;
     }
     if (
       (sandikNo.length > 0 || okulAdi.length > 0) &&
       window.confirm("Sayıları sıfırlamak istediğinize emin misiniz?")
     ) {
       resetVotes();
+      return;
     }
   };
 
