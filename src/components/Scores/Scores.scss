@@ -4,6 +4,7 @@
   gap: 0.5rem;
   flex-direction: column;
   width: 100%;
+  //   padding: 0 0.5rem;
   .scores__row {
     display: flex;
     justify-content: start;
@@ -17,7 +18,7 @@
       justify-content: center;
       align-items: center;
       height: 100%;
-      width: 11%;
+      width: 15%;
     }
 
     .scores__text {
