@@ -4,12 +4,18 @@ import { useContext } from "react";
 import { MdLoop } from "react-icons/md";
 
 const Reset = () => {
-  const { resetVotes, totalVotes } = useContext(VoteContext);
+  const { resetVotes, totalVotes, sandikNo, okulAdi } = useContext(VoteContext);
 
   const handleReset = () => {
     if (
       totalVotes > 0 &&
-      window.confirm("Sayilari sifirlamak istediginize emin misiniz?")
+      window.confirm("Sayıları sıfırlamak istediğinize emin misiniz?")
+    ) {
+      resetVotes();
+    }
+    if (
+      (sandikNo.length > 0 || okulAdi.length > 0) &&
+      window.confirm("Sayıları sıfırlamak istediğinize emin misiniz?")
     ) {
       resetVotes();
     }
