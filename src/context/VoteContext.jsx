@@ -30,25 +30,43 @@ export const VoteProvider = ({ children }) => {
     getLocalStorage("gecersizVotes", 0)
   );
   const [reset, setReset] = useState(false);
+  const [sandikNo, setSandikNo] = useState(() =>
+    getLocalStorage("sandikNo", "")
+  );
+  const [okulAdi, setOkulAdi] = useState(() => getLocalStorage("okulAdi", ""));
 
   useEffect(() => {
     setLocalStorage("recepVotes", recepVotes);
+  }, [recepVotes]);
+
+  useEffect(() => {
     setLocalStorage("kemalVotes", kemalVotes);
+  }, [kemalVotes]);
+
+  useEffect(() => {
     setLocalStorage("gecersizVotes", gecersizVotes);
-  }, [recepVotes, kemalVotes, gecersizVotes]);
+  }, [gecersizVotes]);
+
+  useEffect(() => {
+    setLocalStorage("sandikNo", sandikNo);
+  }, [sandikNo]);
+
+  useEffect(() => {
+    setLocalStorage("okulAdi", okulAdi);
+  }, [okulAdi]);
 
   useEffect(() => {
     if (reset) {
       try {
-        localStorage.clear(); // clear localStorage on reset
+        localStorage.clear();
       } catch (error) {
-        console.warn(
-          "Failed to clear localStorage. Votes may persist between sessions."
-        );
+        console.warn("Failed to clear localStorage.");
       }
-      setGecersizVotes(0);
-      setKemalVotes(0);
       setRecepVotes(0);
+      setKemalVotes(0);
+      setGecersizVotes(0);
+      setSandikNo("");
+      setOkulAdi("");
       setReset(false);
     }
   }, [reset]);
@@ -79,6 +97,10 @@ export const VoteProvider = ({ children }) => {
         totalVotes,
         validVotes,
         resetVotes,
+        sandikNo,
+        setSandikNo: delayedVoteUpdate(setSandikNo),
+        okulAdi,
+        setOkulAdi: delayedVoteUpdate(setOkulAdi),
       }}
     >
       {children}
