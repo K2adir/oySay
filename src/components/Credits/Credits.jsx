@@ -52,7 +52,12 @@ const Credits = () => {
             </div>
             <div className="credits__icon">
               {credit.links.map((link, linkIndex) => (
-                <a href={link.url} target="_blank" key={linkIndex}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={linkIndex}
+                >
                   <link.icon />
                 </a>
               ))}
