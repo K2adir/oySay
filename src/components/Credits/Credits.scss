@@ -16,12 +16,16 @@
   }
 
   .credits__content_hide {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
   }
 
   .credits__content {
     gap: 2rem;
     line-height: 0;
+    max-height: 100dvh;
+    transition: max-height 0.5s ease-in;
 
     .credits__bar {
       display: flex;

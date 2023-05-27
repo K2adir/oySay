@@ -20,7 +20,7 @@ const CREDITS_DATA = [
       { url: "https://instagram.com/b.denizturan", icon: FiInstagram },
     ],
   },
-  // More credits can be added here
+  // add credit
 ];
 const Credits = () => {
   const [showCredits, setShowCredits] = useState(false);
@@ -29,6 +29,8 @@ const Credits = () => {
   useEffect(() => {
     if (showCredits) {
       endOfCredits.current.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [showCredits]);
 
