@@ -12,10 +12,12 @@ const Inputs = () => {
 
     if (inputValue === "") {
       setSandikNo("");
-    } else if (!inputValue.startsWith(prefix)) {
-      setSandikNo(prefix + inputValue);
-    } else {
+    } else if (inputValue === prefix || inputValue === prefix.slice(0, -1)) {
+      setSandikNo(prefix);
+    } else if (inputValue.startsWith(prefix)) {
       setSandikNo(inputValue);
+    } else {
+      setSandikNo(prefix + inputValue);
     }
   };
 
