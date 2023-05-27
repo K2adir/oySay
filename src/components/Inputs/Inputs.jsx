@@ -8,19 +8,17 @@ const Inputs = () => {
 
   const handleSandikNoChange = (event) => {
     const inputValue = event.target.value;
-    if (inputValue === "Sandik #") {
+    if (inputValue === "Sandık#") {
       setSandikNo("");
     } else {
       setSandikNo(
-        inputValue.startsWith("Sandik #")
-          ? inputValue
-          : `Sandik # ${inputValue}`
+        inputValue.startsWith("Sandık#") ? inputValue : `Sandık# ${inputValue}`
       );
     }
   };
 
   const handleSandikNoBlur = () => {
-    if (sandikNo === "Sandik #") {
+    if (sandikNo === "Sandık#") {
       setSandikNo("");
     }
   };
