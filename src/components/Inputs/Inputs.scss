@@ -49,6 +49,7 @@
     &::placeholder {
       @media screen and (max-width: 370px) {
         font-size: 0.8rem;
+        font-weight: 600;
       }
     }
   }
