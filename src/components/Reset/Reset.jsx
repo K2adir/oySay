@@ -19,7 +19,7 @@ const Reset = () => {
     <section className="reset__container">
       <div className="reset__back">
         <button onClick={handleReset} className="reset__button">
-          Bastan Say
+          Baştan Say
           <span>
             <MdLoop />
           </span>
