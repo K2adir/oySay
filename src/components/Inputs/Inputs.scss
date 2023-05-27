@@ -1,18 +1,52 @@
 .input__container {
   width: 100%;
-
+  margin-top: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-left: 1rem;
   padding-right: 1rem;
-  input {
-    font-size: 1rem;
+
+  .input__okul {
+    display: flex;
+    width: 70%;
+  }
+  .input__sandik {
+    display: flex;
+    width: 30%;
+  }
+
+  .input__label {
+    background-color: #d9d9d9;
+    height: 2rem;
+    width: 19.4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input__icon {
+    font-size: 1.5rem;
+  }
+  .input__label-gap {
+    margin-left: 0.5rem;
+  }
+  .input__input {
+    font-size: 0.9rem;
     background-color: #c8c9ca;
-    text-align: center;
-    // border-radius: 10px;
+    text-align: start;
+    padding-left: 1rem;
     width: 100%;
     border: none;
     height: 2rem;
+    @media screen and (max-width: 370px) {
+      font-size: 0.8rem;
+      padding-left: 0.3rem;
+    }
+    &::placeholder {
+      @media screen and (max-width: 370px) {
+        font-size: 0.8rem;
+      }
+    }
   }
 }
