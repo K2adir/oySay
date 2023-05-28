@@ -21,7 +21,7 @@
   .credits__content_hide {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-out;
+    transition: max-height 0s ease-in;
   }
 
   .credits__content {
